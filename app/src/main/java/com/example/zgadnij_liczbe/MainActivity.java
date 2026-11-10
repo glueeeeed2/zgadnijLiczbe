@@ -1,6 +1,7 @@
 package com.example.zgadnij_liczbe;
 
 import android.Manifest;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
     private int clickedButton;
 
 
-    public void checkIsCorrect(Number number) {
+    public void checkIsCorrect(Number number, Button btn) {
         boolean isCorrect = number.checkIfSelectedNumberCorrect(clickedButton);
         if (isCorrect) {
             Toast.makeText(MainActivity.this, "Poprawna!", Toast.LENGTH_SHORT).show();
+            btn.setBackgroundColor(Color.GREEN);
         } else {
             Toast.makeText(MainActivity.this, "Niepoprawna!", Toast.LENGTH_SHORT).show();
+            btn.setBackgroundColor(Color.RED);
         }
     }
 
@@ -78,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clickedButton = 1;
-                boolean isCorrect = number.checkIfSelectedNumberCorrect(clickedButton);
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn1);
             }
         });
 
@@ -87,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clickedButton = 2;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn2);
             }
         });
 
@@ -95,70 +97,70 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clickedButton = 3;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn3);
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 4;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn4);
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 5;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn5);
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 6;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn6);
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 7;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn7);
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 8;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn8);
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 9;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn9);
             }
         });
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 10;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn10);
             }
         });
         btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 11;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn10);
             }
         });
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton = 12;
-                checkIsCorrect(number);
+                checkIsCorrect(number,btn12);
             }
         });
 

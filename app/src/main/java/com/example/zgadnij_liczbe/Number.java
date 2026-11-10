@@ -18,4 +18,15 @@ public class Number {
     boolean checkIfSelectedNumberCorrect(int selected) {
         return generatedNumber == selected;
     }
+
+
+    String showTip(int selected) {
+        if (selected > generatedNumber) {
+            return "Wieksza liczba!";
+        } else {
+            return "Mniejsza Liczba";
+        }
+    }
+
+
 }
