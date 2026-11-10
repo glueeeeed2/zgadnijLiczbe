@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Poprawna!", Toast.LENGTH_SHORT).show();
             btn.setBackgroundColor(Color.GREEN);
         } else {
-            Toast.makeText(MainActivity.this, "Niepoprawna!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Niepoprawna! Podpowiedź: " + number.showTip(clickedButton) , Toast.LENGTH_SHORT).show();
             btn.setBackgroundColor(Color.RED);
         }
     }

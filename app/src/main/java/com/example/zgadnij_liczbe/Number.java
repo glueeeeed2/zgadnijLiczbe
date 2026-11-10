@@ -22,9 +22,9 @@ public class Number {
 
     String showTip(int selected) {
         if (selected > generatedNumber) {
-            return "Wieksza liczba!";
+            return "Mniejsza liczba!";
         } else {
-            return "Mniejsza Liczba";
+            return "Wieksza Liczba";
         }
     }
 
